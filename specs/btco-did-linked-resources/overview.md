@@ -19,7 +19,7 @@ Resources are managed through a series of ordinal inscriptions that contain:
 
 Each resource is uniquely identified using:
 - Collection ID (the associated DID)
-- Resource ID (the inscription ID)
+- Resource Index (the inscription's position on the sat)
 - Resource Name
 - Resource Type
 - Optional Version information
@@ -39,9 +39,8 @@ Each resource is uniquely identified using:
 ### Resource Resolution
 
 Resources can be resolved through:
-1. Direct ordinal inscription lookup
-2. DID-relative resource identifiers
-3. Alternative URI references (when provided)
+1. DID-relative resource identifiers
+2. Alternative URI references (when provided)
 
 ### Implementation Considerations
 

@@ -86,7 +86,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
 <p>Each resource is uniquely identified using:</p>
 <ul>
 <li>Collection ID (the associated DID)</li>
-<li>Resource ID (the inscription ID)</li>
+<li>Resource Index (the inscription’s position on the sat)</li>
 <li>Resource Name</li>
 <li>Resource Type</li>
 <li>Optional Version information</li>
@@ -109,7 +109,6 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
 <h3 id="resource-resolution"><a class="toc-anchor" href="#resource-resolution" >§</a> Resource Resolution</h3>
 <p>Resources can be resolved through:</p>
 <ol>
-<li>Direct ordinal inscription lookup</li>
 <li>DID-relative resource identifiers</li>
 <li>Alternative URI references (when provided)</li>
 </ol>
