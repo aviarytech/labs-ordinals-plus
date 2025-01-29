@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #f7931a;
+  --primary-dark: #d97b0d;
+  --secondary-color: #4a90e2;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --gray-light: #f8f9fa;
+  --gray-medium: #e9ecef;
+  --gray-dark: #495057;
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-7 py-3 rounded text-center no-underline transition-all duration-300 font-semibold tracking-wider whitespace-nowrap;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#f7931a] to-[#d97b0d] shadow-sm text-white;
+  }
+}
+
+/* Accordion Styles */
+.accordion.tab {
+  @apply border-none rounded-none overflow-hidden mb-8 bg-white relative w-full;
+}
+
+.tab__label {
+  @apply relative;
+}
+
+.tab__label::after {
+  content: "⟩";
+  @apply w-4 h-4 text-center rotate-90 transition-all duration-350 text-base mt-2 text-[#f7931a];
+}
+
+.tab__label::before {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-[6px];
+  background-image: linear-gradient(
+    transparent 2px,
+    var(--primary-color) 2px,
+    var(--primary-color) 3px,
+    transparent 3px,
+    transparent 5px,
+    var(--primary-color) 5px,
+    var(--primary-color) 6px
+  );
+}
+
+.tab__content {
+  @apply transition-all duration-350 w-full overflow-x-hidden;
+}
+
+input:checked ~ .tab__content {
+  @apply max-h-[3000px] px-8 py-6;
+}
+
+input:checked + .tab__label::after {
+  @apply rotate-[270deg];
+}
+
+.explainer-grid {
+  @apply grid grid-cols-1 gap-8 py-6 w-full;
+}
+
+.explainer-item {
+  @apply bg-[#f8f9fa] p-8 rounded-xl shadow-sm border border-[#e9ecef] transition-all duration-300 w-full;
+}
+
+.explainer-item:hover {
+  @apply shadow-md -translate-y-1;
+}
+
+.explainer-item h3 {
+  @apply text-[#333333] mb-6 text-xl font-semibold;
+}
+
+.explainer-item ul {
+  @apply list-none p-0 m-0;
+}
+
+.explainer-item li {
+  @apply mb-4 pl-10 relative text-[#495057] bg-[#f8f9fa] p-4 rounded-lg transition-all duration-300;
+  word-wrap: break-word;
+  white-space: normal;
+  min-width: 0;
+}
+
+.explainer-item li:before {
+  content: "→";
+  @apply absolute left-4 text-[#f7931a] mr-4;
+}
+
+.explainer-item:nth-child(1),
+.explainer-item:nth-child(2) {
+  @apply bg-[#f8f9fa];
+}
+
+.explainer-item li > * {
+  @apply max-w-full;
+}
+
+.feature-card {
+  @apply bg-[#f8f9fa] p-8 rounded-xl border border-[#e9ecef] text-center;
+}
+
+.feature-card li {
+  @apply bg-[#f8f9fa] p-2 rounded-md text-[0.95rem];
+}
+
+/* Add these styles at the end of your globals.css file */
+.specification h2 a {
+  @apply transition-colors duration-200;
+}
+
+.specification p {
+  @apply text-[#495057] leading-relaxed;
+}
+
+/* Add these styles to your globals.css */
+
+.blog-content {
+  @apply text-[#495057] leading-relaxed;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  @apply text-[#333333] font-bold mt-8 mb-4;
+}
+
+.blog-content p {
+  @apply mb-4;
+}
+
+.blog-content a {
+  @apply text-[#f7931a] hover:text-[#d97b0d] transition-colors;
+}
+
+.blog-content ul {
+  @apply mb-4 pl-6 list-disc;
+}
+
+.blog-content ol {
+  @apply mb-4 pl-6 list-decimal;
+}
+
+.blog-content li {
+  @apply mb-2 pl-2;
+}
+
+.blog-content pre {
+  @apply bg-[#f8f9fa] p-4 rounded-lg mb-4 overflow-x-auto;
+}
+
+.blog-content code {
+  @apply bg-[#f8f9fa] px-1 py-0.5 rounded;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-[#f7931a] pl-4 italic my-4;
+}
