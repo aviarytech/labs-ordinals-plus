@@ -3,17 +3,12 @@
 import { useEffect, useRef } from 'react'
 import QRCode from 'qrcode'
 
-interface DonateModalProps {
-  isOpen: boolean
-  onClose: () => void
-}
-
-export default function DonateModal({ isOpen, onClose }: DonateModalProps) {
+export default function DonateContent() {
   const qrRef = useRef<HTMLCanvasElement>(null)
   const btcAddress = 'bc1qm5mkrkjgcrhk867xnvdt7rzjjsut3qhyulzcw8'
 
   useEffect(() => {
-    if (isOpen && qrRef.current) {
+    if (qrRef.current) {
       QRCode.toCanvas(
         qrRef.current,
         btcAddress,
@@ -30,9 +25,7 @@ export default function DonateModal({ isOpen, onClose }: DonateModalProps) {
         }
       )
     }
-  }, [isOpen])
-
-  if (!isOpen) return null
+  }, [])
 
   const copyAddress = async () => {
     try {
@@ -51,24 +44,19 @@ export default function DonateModal({ isOpen, onClose }: DonateModalProps) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={onClose}>
-      <div className="bg-white rounded-2xl p-6 max-w-[400px] w-full" onClick={e => e.stopPropagation()}>
-        <div className="flex justify-between items-start mb-8">
-          <h2 className="text-2xl font-bold leading-tight">
+    <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[500px] mx-auto bg-white rounded-2xl p-8 shadow-md">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold mb-4">
             Thank You for Supporting<br />
             Ordinals Plus! 🙏
-          </h2>
-          <button 
-            onClick={onClose} 
-            className="text-black/50 hover:text-black text-2xl font-light leading-none"
-          >
-            ×
-          </button>
+          </h1>
+          <p className="text-[#495057]">Your support helps us continue developing open-source tools for the Bitcoin ecosystem.</p>
         </div>
         
         <div className="space-y-8">
           <div className="flex justify-center">
-            <div className="bg-white">
+            <div className="bg-white p-4 rounded-xl shadow-sm">
               <canvas ref={qrRef} className="mx-auto" />
             </div>
           </div>

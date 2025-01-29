@@ -1,12 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
-import DonateModal from './DonateModal';
 
 export default function Roadmap() {
-  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
-
   return (
     <section className="py-24 px-8 bg-[#f8f9fa] relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
@@ -78,7 +74,7 @@ export default function Roadmap() {
                 Completes May 18, 2025
               </div>
               <button 
-                onClick={() => setIsDonateModalOpen(true)} 
+                onClick={() => window.location.href = '/donate'} 
                 className="mt-4 px-4 py-2 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] text-white rounded-lg font-semibold hover:shadow-lg transition-shadow"
               >
                 Support Development ₿
@@ -116,11 +112,6 @@ export default function Roadmap() {
         <div className="absolute top-1/4 right-0 text-[#f7931a]/10 text-6xl font-bold rotate-12">₿</div>
         <div className="absolute bottom-1/4 left-0 text-[#f7931a]/10 text-6xl font-bold -rotate-12">₿</div>
       </div>
-
-      <DonateModal 
-        isOpen={isDonateModalOpen}
-        onClose={() => setIsDonateModalOpen(false)}
-      />
     </section>
   )
 } 

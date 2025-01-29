@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Community() {
   return (
     <section id="community" className="py-16 px-8">
@@ -10,7 +12,7 @@ export default function Community() {
         <div className="flex-1 min-w-[250px] text-center p-8 bg-white rounded-xl shadow-md border border-[#e9ecef]">
           <h3 className="text-xl font-semibold mb-4">Monthly Updates</h3>
           <p className="text-[#495057] mb-4">Follow our progress with monthly development insights</p>
-          <a href="/blog/dif-labs-announcement" className="btn btn-primary">Read Latest</a>
+          <Link href="/blog/dif-labs-announcement" className="btn btn-primary">Read Latest</Link>
         </div>
 
         <div className="flex-1 min-w-[250px] text-center p-8 bg-white rounded-xl shadow-md border border-[#e9ecef] opacity-60 relative">

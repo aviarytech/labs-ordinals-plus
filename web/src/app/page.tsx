@@ -7,7 +7,6 @@ import Roadmap from '@/components/Roadmap'
 import Community from '@/components/Community'
 import Documentation from '@/components/Documentation'
 import Footer from '@/components/Footer'
-import DonateModal from '@/components/DonateModal'
 
 export default function Home() {
   return (
@@ -21,9 +20,8 @@ export default function Home() {
         <Roadmap />
         <Community />
         <Documentation />
-        <DonateModal />
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }

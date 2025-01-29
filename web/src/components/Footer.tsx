@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -15,9 +16,9 @@ export default function Footer() {
             <a href="https://github.com/decentralized-identity/labs-ordinals-plus" className="text-[#495057] no-underline my-2">
               GitHub
             </a>
-            <a href="/blog" className="text-[#495057] no-underline my-2">
+            <Link href="/blog" className="text-[#495057] no-underline my-2">
               Blog
-            </a>
+            </Link>
             <a href="#docs" className="text-[#495057] no-underline my-2">
               Documentation
             </a>

@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { cache } from 'react'
 
 export interface BlogPost {
   slug: string
@@ -15,45 +16,46 @@ export interface BlogPost {
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog')
 
-export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const slug = fileName.replace(/\.md$/, '')
-      const post = await getBlogPost(slug)
-      return post
-    })
-  )
-  
-  return allPostsData.filter(post => post !== null).sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
-}
+// Process all blog posts at module initialization time
+const processedPosts = new Map<string, BlogPost>()
 
-export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`)
+function processAllPosts() {
+  const fileNames = fs.readdirSync(postsDirectory)
+  fileNames.forEach((fileName) => {
+    const slug = fileName.replace(/\.md$/, '')
+    const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     
     const { data, content } = matter(fileContents)
-    const processedContent = await remark()
+    const processedContent = remark()
       .use(html)
-      .process(content)
+      .processSync(content)
     
-    return {
+    processedPosts.set(slug, {
       slug,
       title: data.title,
       date: data.date,
       tags: data.tags || [],
       excerpt: data.excerpt || '',
       content: processedContent.toString()
-    }
-  } catch (e) {
-    console.error(`Error getting blog post ${slug}:`, e)
-    return null
-  }
-} 
+    })
+  })
+}
+
+// Process all posts when this module is loaded
+processAllPosts()
+
+export const getAllBlogPosts = cache((): BlogPost[] => {
+  return Array.from(processedPosts.values())
+    .sort((a, b) => {
+      if (a.date < b.date) {
+        return 1
+      } else {
+        return -1
+      }
+    })
+})
+
+export const getBlogPost = cache((slug: string): BlogPost | null => {
+  return processedPosts.get(slug) || null
+}) 
