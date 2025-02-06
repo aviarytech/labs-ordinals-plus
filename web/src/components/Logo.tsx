@@ -4,13 +4,13 @@ interface LogoProps {
 
 export default function Logo({ size = 'md' }: LogoProps) {
   const sizes = {
-    md: 'w-8 h-8 text-[32px]',
-    lg: 'w-10 h-10 text-[42px]'
+    md: 'w-9 h-9 text-[32px]',
+    lg: 'w-11 h-11 text-[42px]'
   }
 
   const innerSizes = {
-    md: 'w-6 h-6 pb-[4px] pr-[0.5px]',
-    lg: 'w-8 h-8 pb-[6px] pr-[0.5px]'
+    md: 'w-7 h-7 pb-[4px] pr-[0.5px]',
+    lg: 'w-9 h-9 pb-[6px] pr-[0.5px]'
   }
 
   return (

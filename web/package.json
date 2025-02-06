@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-specs": "bun src/scripts/generateSpecsPage.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",

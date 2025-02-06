@@ -31,8 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Generate Specs Page
+        run: |
+          cd web
+          bun install
+          bun run generate-specs
+          cd ..
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
