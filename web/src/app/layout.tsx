@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '⊕ Ordinals Plus',
-  description: 'Making Ordinals Great Again',
+  title: 'Ordinals Plus',
+  description: 'Authentic Assets on Bitcoin',
 }
 
 export default function RootLayout({

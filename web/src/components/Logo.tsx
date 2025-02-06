@@ -4,21 +4,20 @@ interface LogoProps {
 
 export default function Logo({ size = 'md' }: LogoProps) {
   const sizes = {
-    sm: 'w-5 h-5 text-base',
-    md: 'w-8 h-8 text-xl',
-    lg: 'w-9 h-9 text-4xl'
+    sm: 'w-5 h-5 text-[16px]',
+    md: 'w-8 h-8 text-[24px]',
+    lg: 'w-10 h-10 text-[38px]'
   }
 
   const innerSizes = {
-    sm: 'w-3.5 h-3.5',
-    md: 'w-6 h-6',
-    lg: 'w-7.5 h-7.5 pb-1.5'
+    sm: 'w-4 h-4 pb-[3px]',
+    md: 'w-6 h-6 pb-[3px]',
+    lg: 'w-8 h-8 pb-[6px]'
   }
 
   return (
-    <p className={`${sizes[size]} bg-white rounded-full p-0.5 mb-0.5 border border-black`}>
-      <span className={`flex items-center align-middle justify-center
-                       font-bold pb-0.5 ${innerSizes[size]} bg-black text-white rounded-full
+    <p className={`${sizes[size]} bg-white rounded-full flex items-center justify-center border border-black`}>
+      <span className={`${innerSizes[size]} flex items-center justify-center font-bold bg-black text-white rounded-full
                        leading-none`}>⊕</span>
     </p>
   )

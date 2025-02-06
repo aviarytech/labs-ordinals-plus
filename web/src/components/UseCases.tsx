@@ -42,7 +42,7 @@ export default function UseCases() {
             </div>
             <div className="p-7 bg-white">
               <h3 className="text-xl font-semibold text-[#333333] mb-3">Sports Memorabilia</h3>
-              <p className="text-[#495057] leading-relaxed">Own authenticated digital collectibles of legendary sports moments with verifiable provenance and NBA legend backing</p>
+              <p className="text-[#495057] leading-relaxed">Own authenticated digital collectibles of legendary sports moments with verifiable provenance</p>
             </div>
           </a>
 
@@ -64,21 +64,21 @@ export default function UseCases() {
             </div>
           </a>
 
-          {/* Crisis Tourism Management */}
-          <a href="https://crisis-tourism-harmony.lovable.app/" target="_blank" rel="noopener noreferrer"
+          {/* Authentic Travel Experiences */}
+          <a href="https://authentic-travel-experiences.lovable.app/" target="_blank" rel="noopener noreferrer"
              className="group bg-white rounded-2xl overflow-hidden shadow-md border border-[rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
             <div className="relative h-[220px] overflow-hidden">
               <Image
-                src="/images/crisis-tourism.jpg"
-                alt="Mountain landscape with person standing on peak"
+                src="/images/travel.jpg"
+                alt="Scenic travel destination with authentic local experience"
                 layout="fill"
                 objectFit="cover"
                 className="transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="p-7 bg-white">
-              <h3 className="text-xl font-semibold text-[#333333] mb-3">Crisis Tourism Management</h3>
-              <p className="text-[#495057] leading-relaxed">Empower destinations with verifiable credentials for emergency response and real-time crisis management tools</p>
+              <h3 className="text-xl font-semibold text-[#333333] mb-3">Authentic Travel Experiences</h3>
+              <p className="text-[#495057] leading-relaxed">Discover and book verified authentic travel experiences with blockchain-backed credentials ensuring genuine local interactions</p>
             </div>
           </a>
 

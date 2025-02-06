@@ -9,7 +9,7 @@ export default function Hero() {
           <span className="flex justify-center items-center text-[#333333] text-4xl font-semibold mb-8 gap-2">
             <Logo size="lg" /> Ordinals Plus
           </span>
-          <span className="block text-[#f7931a] text-4xl font-extrabold">Making Ordinals Great Again</span>
+          {/* <span className="block text-[#f7931a] text-4xl font-extrabold">Authentic Assets on Bitcoin</span> */}
         </h1>
 
         <div className="max-w-[800px] mx-auto">
@@ -19,8 +19,7 @@ export default function Hero() {
                 <div className="explainer-item">
                   <h3>Permanent and Self-Owned Digital Assets</h3>
                   <ul>
-                    <li>Ordinals leverage Bitcoin&apos;s blockchain, a decentralized and immutable ledger, to inscribe data permanently.</li>
-                    <li>They enable users to attach unique content, such as images, text, or other digital artifacts, to individual satoshis (the smallest units of Bitcoin).</li>
+                    <li>Ordinal Theory organizes Bitcoin&apos;s blockchain and inscribes data permanently while associating it with an individual satoshi.</li>
                     <li>This innovation allows for the creation and ownership of digital assets, like art or collectibles, in a secure, tamper-proof, and enduring manner.</li>
                   </ul>
                 </div>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="flex flex-col">
             <h4 className="flex items-center gap-2 text-lg font-semibold mb-2"><Logo size="sm" /> Ordinals Plus</h4>
-            <p className="text-[#495057]">Making Ordinals Great Again</p>
+            <p className="text-[#495057]">Authentic Assets on Bitcoin</p>
           </div>
           
           <div className="flex flex-col">
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
         
         <div className="text-center pt-8 border-t border-[#495057]">
-          <p className="text-[#495057]">&copy; 2024 Ordinals Plus - Making Ordinals Great Again</p>
+          <p className="text-[#495057]">&copy; 2024 Ordinals Plus - Authentic Assets on Bitcoin</p>
         </div>
       </div>
     </footer>
