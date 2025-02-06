@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="flex flex-col">
-            <h4 className="flex items-center gap-2 text-lg font-semibold mb-2"><Logo size="sm" /> Ordinals Plus</h4>
+            <h4 className="flex items-center gap-2 text-lg font-semibold mb-2"><Logo size="md" /> Ordinals Plus</h4>
             <p className="text-[#495057]">Authentic Assets on Bitcoin</p>
           </div>
           
