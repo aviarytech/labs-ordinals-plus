@@ -53,7 +53,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Features grid will be rendered by the Features component */}
       </div>
     </section>
   )

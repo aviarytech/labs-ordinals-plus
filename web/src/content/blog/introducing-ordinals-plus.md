@@ -1,5 +1,5 @@
 ---
-title: "Introducing Ordinals Plus: The Future of Verifiable Assets on Bitcoin"
+title: "Introducing Ordinals Plus: Authentic Assets on Bitcoin"
 date: "2025-02-06"
 description: "We're excited to announce our rebranding to Ordinals Plus, reflecting our mission to bring enhanced verifiable credentials to the Bitcoin ecosystem through Ordinals."
 tags: ["announcement", "rebranding", "ordinals-plus"]
