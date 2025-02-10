@@ -21,6 +21,26 @@
         "repo": "labs-btco-vc"
       },
       "output_path": "./dist/btco-did-linked-resources"
+    },
+    {
+      "title": "BTCO DID Method",
+      "spec_directory": "./specs/btco-did-method/v0.2.0",
+      "markdown_paths": [
+        "header.md",
+        "abstract.md",
+        "overview.md",
+        "specification.md",
+        "changelog.md",
+        "test-vectors.md"
+      ],
+      "logo": "https://rawcdn.githack.com/decentralized-identity/decentralized-identity.github.io/a3ca39717e440302d1fd99a796e7f00e1c42eb2d/images/logo-flat.svg",
+      "logo_link": "https://ordinals.plus",
+      "source": {
+        "host": "github",
+        "account": "decentralized-identity",
+        "repo": "labs-btco-vc"
+      },
+      "output_path": "./dist/btco-did-method"
     }
   ]
 }

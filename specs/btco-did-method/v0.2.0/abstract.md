@@ -1,0 +1,3 @@
+## Abstract
+
+The BTCO DID Method specification defines a decentralized identifier method that leverages [[ref: Bitcoin (BTC)]] [[ref: Ordinal Theory]] and [[ref: Inscriptions]] to create, resolve, update and deactivate [[ref: Decentralized Identifiers (DIDs)]]. This method provides a robust foundation for digital identity management directly on the Bitcoin blockchain by using ordinal numbers to uniquely identify satoshis. The specification details the syntax, operations, and security considerations for implementing BTCO DIDs, enabling organizations and individuals to establish verifiable digital identities that are as durable and secure as Bitcoin itself. 

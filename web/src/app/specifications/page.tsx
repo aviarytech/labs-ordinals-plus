@@ -12,17 +12,17 @@ export default function Specifications() {
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60px] h-1 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] rounded"></span>
           </h1>
           
-          <div className="max-w-[800px] mx-auto">
+          <div className="max-w-[800px] mx-auto space-y-8">
             <article className="bg-white p-8 rounded-xl shadow-md border border-[#e9ecef]">
               <h2 className="flex flex-wrap items-center gap-3 text-2xl font-bold mb-6">
                 <a 
-                  href="https://identity.foundation/labs-btco-vc/"
+                  href="btco-did-method/"
                   className="text-[#333333] no-underline"
                 >
-                  BTCO DID Linked Resources
+                  BTCO DID Method
                 </a>
                 <span className="bg-[#f8f9fa] text-[#495057] px-3 py-1 rounded-full text-sm font-medium">
-                  v0.1.0
+                  v0.2.0
                 </span>
                 <span className="bg-[#fff3cd] text-[#856404] px-3 py-1 rounded-full text-sm font-medium">
                   Draft
@@ -31,13 +31,30 @@ export default function Specifications() {
               
               <div className="space-y-4 text-[#495057] leading-relaxed">
                 <p>
-                  The BTC Ordinals DID Linked Resources extension provides a standardized framework for associating immutable DID Linked Resources with Decentralized Identifiers (DIDs) anchored in the Bitcoin blockchain through ordinal inscriptions.
+                  The BTCO DID Method specification defines a decentralized identifier method that leverages Bitcoin Ordinal Theory and Inscriptions to create, resolve, update and deactivate DIDs directly on the Bitcoin blockchain.
                 </p>
+              </div>
+            </article>
+
+            <article className="bg-white p-8 rounded-xl shadow-md border border-[#e9ecef]">
+              <h2 className="flex flex-wrap items-center gap-3 text-2xl font-bold mb-6">
+                <a 
+                  href="btco-did-linked-resources/"
+                  className="text-[#333333] no-underline"
+                >
+                  BTCO DID Linked Resources
+                </a>
+                <span className="bg-[#f8f9fa] text-[#495057] px-3 py-1 rounded-full text-sm font-medium">
+                  v0.2.0
+                </span>
+                <span className="bg-[#fff3cd] text-[#856404] px-3 py-1 rounded-full text-sm font-medium">
+                  Draft
+                </span>
+              </h2>
+              
+              <div className="space-y-4 text-[#495057] leading-relaxed">
                 <p>
-                  This specification introduces mechanisms for creating, managing, and referencing linked resources, enabling organizations and individuals to attach verifiable credential schemas, governance frameworks, logos, status lists, and other resource types to their DIDs.
-                </p>
-                <p>
-                  The extension ensures the authenticity, integrity, and traceability of resources while maintaining compatibility with W3C DID Core standards and interoperability with existing BTC Ordinals inscriptions. The specification addresses key challenges such as Resource Resolution, resource discovery, and version management, providing a robust foundation for secure and scalable applications in decentralized identity ecosystems.
+                  The BTCO DID Linked Resources extension provides a standardized framework for associating immutable resources with DIDs through Bitcoin Ordinal inscriptions, enabling verifiable credential schemas, governance frameworks, and other resource types.
                 </p>
               </div>
             </article>

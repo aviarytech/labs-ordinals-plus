@@ -1,4 +1,4 @@
-BTCO DID Linked Resources<br>
+BTCO DID Method<br>
 ==================
 
 **Specification Status:** EDITORS DRAFT
@@ -21,4 +21,4 @@ BTCO DID Linked Resources<br>
 ~ [File a bug](https://github.com/decentralized-identity/labs-btco-vc/issues)
 ~ [Commit history](https://github.com/decentralized-identity/labs-btco-vc/commits/main)
 
-------------------------------------
+------------------------------------ 

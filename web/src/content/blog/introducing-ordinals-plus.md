@@ -1,24 +1,24 @@
 ---
 title: "Introducing Ordinals Plus: Authentic Assets on Bitcoin"
 date: "2025-02-06"
-description: "We're excited to announce our rebranding to Ordinals Plus, reflecting our mission to bring enhanced verifiable credentials to the Bitcoin ecosystem through Ordinals."
-tags: ["announcement", "rebranding", "ordinals-plus"]
+description: "Introducing Ordinals Plus, bringing enhanced verifiable credentials to the Bitcoin ecosystem through Ordinals."
+tags: ["announcement", "launch", "ordinals-plus"]
 ---
 
-We're thrilled to announce our rebranding to Ordinals Plus! This new identity better reflects our mission to enhance Bitcoin Ordinals with decentralized identity capabilities, creating a more powerful and versatile platform for verifiable digital assets.
+We're excited to introduce Ordinals Plus - a protocol that enhances Bitcoin Ordinals with decentralized identity capabilities, creating a more powerful and versatile system for verifiable digital assets.
 
-## Why Ordinals Plus?
+## What is Ordinals Plus?
 
-The "Plus" in Ordinals Plus represents the additional capabilities we're bringing to the Bitcoin Ordinals ecosystem:
+Ordinals Plus adds decentralized identity capabilities to the Bitcoin Ordinals ecosystem:
 
-- **Enhanced Verification**: Adding decentralized identity technology to create more powerful and trustworthy digital assets
+- **Enhanced Verification**: Using decentralized identity technology to create more powerful and trustworthy digital assets
 - **Standardized Credentials**: Implementing W3C-compatible verifiable credentials on Bitcoin
 - **Universal Resolution**: Enabling seamless verification and resolution of digital assets through Bitcoin-native DIDs
 - **Authentic Provenance**: Creating an unbroken chain of cryptographic proof for digital asset history
 
 ## Our Vision
 
-Ordinals Plus combines the permanence and security of Bitcoin Ordinals with the power of decentralized identity technology. This fusion enables:
+Ordinals Plus combines the permanence and security of Bitcoin Ordinals with the power of decentralized identity technology. This enables:
 
 - Creators to cryptographically sign their work, proving authenticity forever on Bitcoin
 - Collections to be verified, traced, and trusted using modern digital identity systems
@@ -27,20 +27,20 @@ Ordinals Plus combines the permanence and security of Bitcoin Ordinals with the 
 
 ## Real-World Applications
 
-Our platform will enable innovative use cases across various sectors:
+Ordinals Plus enables innovative use cases across various sectors:
 
 - **Event Ticketing**: Creating unforgeable tickets with built-in verification
 - **Sports Memorabilia**: Establishing provable authenticity for digital collectibles
 - **AI Development**: Building trust in AI-powered solutions through verified credentials
 - **Travel Experiences**: Ensuring authentic local experiences with blockchain-backed verification
 
-## Development Progress
+## Development Status
 
-As part of the DIF Labs Beta Cohort, we're making significant progress on our technical specifications and implementation. Our roadmap includes:
+As part of the DIF Labs Beta Cohort, we're actively developing the core protocol components:
 
 1. **Specifications** (through February 2025)
    - Technical specifications development
-   - DID method specification updates
+   - DID method specification
    - Standards documentation
 
 2. **Implementation** (through May 2025)
@@ -64,6 +64,6 @@ We believe in building in the open and welcome community participation. You can 
 
 ## Looking Ahead
 
-The rebranding to Ordinals Plus marks an exciting new chapter in our journey to revolutionize how we think about verifiable credentials on Bitcoin. We're committed to building a robust, standardized framework that enables authentic, verifiable assets while leveraging Bitcoin's unparalleled security and permanence.
+Ordinals Plus represents a new approach to verifiable credentials on Bitcoin. We're building a robust, standardized framework that enables authentic, verifiable assets while leveraging Bitcoin's unparalleled security and permanence.
 
-Stay tuned for regular updates as we continue to develop and refine Ordinals Plus. Together, we're building the future of authentic assets on Bitcoin. 
+Stay tuned for regular updates as we continue to develop Ordinals Plus. Together, we're building the future of authentic assets on Bitcoin. 
