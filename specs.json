@@ -18,7 +18,7 @@
       "source": {
         "host": "github",
         "account": "decentralized-identity",
-        "repo": "labs-btco-vc"
+        "repo": "labs-ordinals-plus"
       },
       "output_path": "./dist/btco-did-linked-resources"
     },
@@ -38,7 +38,7 @@
       "source": {
         "host": "github",
         "account": "decentralized-identity",
-        "repo": "labs-btco-vc"
+        "repo": "labs-ordinals-plus"
       },
       "output_path": "./dist/btco-did-method"
     }

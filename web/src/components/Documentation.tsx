@@ -10,7 +10,7 @@ export default function Documentation() {
         <article className="bg-white p-8 rounded-xl shadow-md border border-[#e9ecef]">
           <h2 className="flex flex-wrap items-center gap-3 text-2xl font-bold mb-6">
             <a 
-              href="https://identity.foundation/labs-btco-vc/btco-did-method"
+              href="https://identity.foundation/labs-ordinals-plus/btco-did-method"
               className="text-[#333333] no-underline hover:text-[#f7931a]"
             >
               BTCO DID Method
@@ -33,7 +33,7 @@ export default function Documentation() {
         <article className="bg-white p-8 rounded-xl shadow-md border border-[#e9ecef]">
           <h2 className="flex flex-wrap items-center gap-3 text-2xl font-bold mb-6">
             <a 
-              href="https://identity.foundation/labs-btco-vc/btco-did-linked-resources"
+              href="https://identity.foundation/labs-ordinals-plus/btco-did-linked-resources"
               className="text-[#333333] no-underline hover:text-[#f7931a]"
             >
               BTCO DID Linked Resources
