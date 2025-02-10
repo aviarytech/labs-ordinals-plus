@@ -34,16 +34,22 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Generate Specs Page
+      - name: Install dependencies
         run: |
+          bun install
           cd web
           bun install
+      - name: Generate Specs Page
+        run: |
+          bun run render
+      - name: Generate Specs Page Index
+        run: |
+          cd web
           bun run generate-specs
-          cd ..
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './web/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
