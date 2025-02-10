@@ -20,7 +20,7 @@ export default function Hero() {
                 <div className="explainer-item">
                   <h3 className="text-xl font-semibold mb-4">Permanent and Self-Owned Digital Assets</h3>
                   <ul className="list-disc pl-5 space-y-3">
-                    <li>Established in 2021 by Casey Rodarmor, <a href="https://docs.ordinals.com" className="text-[#f7931a] hover:underline">Ordinal Theory</a> organizes Bitcoin&apos;s blockchain and inscribes data permanently while associating it with an individual satoshi.</li>
+                    <li>Established in 2022 by Casey Rodarmor, <a href="https://docs.ordinals.com" className="text-[#f7931a] hover:underline">Ordinal Theory</a> organizes Bitcoin&apos;s blockchain and inscribes data permanently while associating it with an individual satoshi.</li>
                     <li>This innovation allows for the creation and ownership of digital assets, like art or collectibles, in a secure, tamper-proof, and enduring manner.</li>
                     <li>While powerful on their own, Ordinals can be enhanced with verifiable authenticity and identity features.</li>
                   </ul>
