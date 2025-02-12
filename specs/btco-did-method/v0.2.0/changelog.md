@@ -10,6 +10,8 @@
    - Transferring control to the new DID
    - Deactivating the old DID
 
+3. **Deactivation Method**: Changed from using inscription content ("🔥") to using metadata for deactivation status. This provides better consistency with other operations and allows inscription content to be used for application-specific purposes.
+
 ### v0.1.0
 - Initial specification release
 - Supported multiple identifier formats (ordinal numbers, names, and decimals)

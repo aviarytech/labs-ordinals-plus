@@ -102,35 +102,6 @@ The Verifiable Credential for an attested collection MUST conform to the followi
   ],
   "type": ["VerifiableCredential", "ResourceCollectionCredential"],
   "issuer": {
-    "id": "did:btco:<sat_number>/<index>"
-  },
-  "validFrom": "<ISO8601_DATE>",
-  "credentialSubject": {
-    "id": "did:btco:<sat_number>/<index>",
-    "type": "ResourceCollection",
-    "name": "<OPTIONAL_COLLECTION_NAME>",
-    "description": "<OPTIONAL_COLLECTION_DESCRIPTION>",
-    "resources": [
-      "did:btco:<sat_number>/<index>",
-      "did:btco:<sat_number>/<index>",
-      "did:btco:<sat_number>/<index>",
-      "did:btco:<sat_number>/<index>",
-      "did:btco:<sat_number>/<index>"
-    ]
-  }
-}
-```
-
-Example Attested Collection VC:
-
-```json
-{
-  "@context": [
-    "https://www.w3.org/ns/credentials/v2",
-    "https://ordinals.plus/v1"
-  ],
-  "type": ["VerifiableCredential", "ResourceCollectionCredential"],
-  "issuer": {
     "id": "did:btco:539864085599956/0"
   },
   "validFrom": "2024-02-21T12:00:00Z",
@@ -170,6 +141,32 @@ The credential MUST include:
 
 Optional fields include:
 - Collection name and description
+
+### Resource Metadata Schema
+
+Resource metadata MUST follow this schema:
+
+```json
+{
+  "id": "did:btco:123/0",
+  "type": "ResourceMetadata",
+  "created": "2024-02-21T12:00:00Z",
+  "contentType": "application/json",
+  "contentLength": 1234,
+  "contentDigest": "sha256-abc123...",
+  "controller": "did:btco:789",
+  "version": "1.0",
+  "previousVersion": "did:btco:123/1",
+  "nextVersion": "did:btco:123/2",
+  "tags": ["schema", "v1"],
+  "attributes": {
+    "schema": {
+      "type": "CredentialSchema",
+      "version": "1.0"
+    }
+  }
+}
+```
 
 ### Resource Resolution
 
@@ -397,6 +394,30 @@ For `/meta`, `/info` and collection endpoints that return structured data about 
 
 Collection endpoints may return paginated results. The specific pagination implementation details will be defined in a future version of this specification.
 
+### Collection Pagination
+
+Collection endpoints MUST support pagination using:
+
+```json
+{
+  "resources": [
+    "did:btco:123/0",
+    "did:btco:456/1"
+  ],
+  "pagination": {
+    "next": "did:btco:789/0",
+    "prev": "did:btco:111/0",
+    "limit": 10,
+    "total": 45
+  }
+}
+```
+
+Query parameters:
+- `limit`: Maximum resources per page (default 10, max 100)
+- `cursor`: Opaque cursor for pagination
+- `order`: Sort order ("asc" or "desc", default "desc")
+
 ### Canonicalization
 
 When cryptographic proofs or comparisons are required, implementations MUST use JSON Canonicalization Scheme (JCS) as defined in RFC 8785 for consistent serialization of JSON data structures.
@@ -417,3 +438,47 @@ Implementations SHOULD:
 - Minimize collection and storage of personally identifiable information
 - Support encryption of sensitive resource data
 - Consider privacy implications of resources and their metadata
+
+### Error Handling
+
+Resolution errors MUST return a JSON response with:
+
+```json
+{
+  "error": "<ErrorCode>",
+  "message": "Human readable message",
+  "details": {
+    // Additional context
+  }
+}
+```
+
+Standard error codes:
+- `ResourceNotFound`: Resource does not exist
+- `InvalidIdentifier`: Malformed resource identifier  
+- `ContentTypeUnsupported`: Unsupported content type
+- `MetadataInvalid`: Invalid or malformed metadata
+- `CollectionEmpty`: Collection contains no resources
+- `ResolutionTimeout`: Resolution exceeded time limit
+
+### Caching Guidelines
+
+Implementations SHOULD:
+
+- Cache resource content with appropriate cache headers
+- Use ETags for cache validation
+- Include Last-Modified timestamps
+- Implement cache invalidation on updates
+- Support conditional requests (If-None-Match, If-Modified-Since)
+
+Example cache headers:
+```http
+Cache-Control: public, max-age=3600
+ETag: "abc123"
+Last-Modified: Wed, 21 Feb 2024 12:00:00 GMT
+```
+
+Cache invalidation events:
+- New inscription on resource satoshi
+- Block reorganization affecting inscriptions
+- Controller change (UTXO spent)
