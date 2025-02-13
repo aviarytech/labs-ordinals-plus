@@ -142,32 +142,6 @@ The credential MUST include:
 Optional fields include:
 - Collection name and description
 
-### Resource Metadata Schema
-
-Resource metadata MUST follow this schema:
-
-```json
-{
-  "id": "did:btco:123/0",
-  "type": "ResourceMetadata",
-  "created": "2024-02-21T12:00:00Z",
-  "contentType": "application/json",
-  "contentLength": 1234,
-  "contentDigest": "sha256-abc123...",
-  "controller": "did:btco:789",
-  "version": "1.0",
-  "previousVersion": "did:btco:123/1",
-  "nextVersion": "did:btco:123/2",
-  "tags": ["schema", "v1"],
-  "attributes": {
-    "schema": {
-      "type": "CredentialSchema",
-      "version": "1.0"
-    }
-  }
-}
-```
-
 ### Resource Resolution
 
 Resources can be resolved using the recursive endpoints provided by the Ordinals protocol. These endpoints return JSON-formatted responses and can be used to resolve resources, their metadata, and their relationships.
