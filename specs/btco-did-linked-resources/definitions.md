@@ -30,7 +30,7 @@
 [[def: Sat Collection]]:
 ~ A collection of resources linked to a specific satoshi, allowing for resource versioning through reinscriptions.
 
-[[def: Attested Collection]]:
+[[def: Curated Collection]]:
 ~ A collection of resources linked through a [[ref: Verifiable Credential (VC)]] that includes a list of resources in a collection.
 
 [[def: Verifiable Credential (VC), Verifiable Credentials (VCs)]]:

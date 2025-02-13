@@ -80,9 +80,9 @@ The controller collection is not yet implementable using recursive endpoints, wh
 
 :::
 
-#### Attested Collection
+#### Curated Collection
 
-An [[ref: Attested Collection]] links resources through a [[ref: Verifiable Credential (VC)]] that includes a list of resources in a collection. This VC is written to the blockchain as metadata to a [[ref: DID Linked Resource]]. The collection identifier of this format is the DID of this resource combined with `/meta`.
+A [[ref: Curated Collection]] links resources through a [[ref: Verifiable Credential (VC)]] that includes a list of resources in a collection. This VC is written to the blockchain as metadata to a [[ref: DID Linked Resource]]. The collection identifier of this format is the DID of this resource combined with `/meta`.
 
 ```
 did:btco:539864085599956/0/meta
@@ -90,9 +90,9 @@ did:btco:539864085599956/0/meta
 
 The [[ref: Verifiable Credential (VC)]] MUST be a valid VC that can be verified by a third party.
 
-##### Attested Collection Credential Schema
+##### Curated Collection Credential Schema
 
-The Verifiable Credential for an attested collection MUST conform to the following schema:
+The Verifiable Credential for a curated collection MUST conform to the following schema:
 
 ```json
 {
@@ -100,14 +100,14 @@ The Verifiable Credential for an attested collection MUST conform to the followi
     "https://www.w3.org/ns/credentials/v2",
     "https://ordinals.plus/v1"
   ],
-  "type": ["VerifiableCredential", "ResourceCollectionCredential"],
+  "type": ["VerifiableCredential", "CuratedCollectionCredential"],
   "issuer": {
     "id": "did:btco:539864085599956/0"
   },
   "validFrom": "2024-02-21T12:00:00Z",
   "credentialSubject": {
     "id": "did:btco:539864085599956/0",
-    "type": "ResourceCollection",
+    "type": "CuratedCollection",
     "name": "My Art Collection",
     "description": "A curated collection of digital art pieces",
     "resources": [
@@ -132,7 +132,7 @@ The Verifiable Credential for an attested collection MUST conform to the followi
 The credential MUST include:
 - Standard W3C Verifiable Credentials context
 - Ordinals Plus collection context
-- `ResourceCollectionCredential` type
+- `CuratedCollectionCredential` type
 - Issuer DID (the resource containing this VC)
 - Valid from date
 - Collection details in credentialSubject
