@@ -30,7 +30,7 @@ export default function Roadmap() {
                    target="_blank" 
                    rel="noopener noreferrer"
                    className="inline-flex items-center bg-black px-2.5 py-1 rounded text-sm font-extrabold tracking-wide ml-3 align-middle">
-                  <Image src="/images/dif.png" alt="DIF Labs" width={40} height={40} className="mr-1.5 filter brightness-0 invert" />
+                  <Image src="/images/dif.png" alt="DIF Labs" width={40} height={40} className=" -mt-[2px] mr-1.5 filter brightness-0 invert" />
                   <span className="text-[#00ff00]">LABS</span>
                 </a>
               </h3>

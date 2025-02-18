@@ -6,6 +6,9 @@
 [[def: Controller Collection]]:
 ~ A collection of resources linked through the wallet address currently holding the resource.
 
+[[def: Curated Collection]]:
+~ A collection of resources linked through a [[ref: Verifiable Credential (VC)]] that includes a list of resources in a collection.
+
 [[def: Decentralized Identifiers (DIDs)]]:
 ~ A decentralized identifier is a type of globally unique identifier that enables an entity to be identified in a manner that is verifiable, persistent, and does not require the use of a centralized registry.
 
@@ -29,9 +32,6 @@
 
 [[def: Sat Collection]]:
 ~ A collection of resources linked to a specific satoshi, allowing for resource versioning through reinscriptions.
-
-[[def: Curated Collection]]:
-~ A collection of resources linked through a [[ref: Verifiable Credential (VC)]] that includes a list of resources in a collection.
 
 [[def: Verifiable Credential (VC), Verifiable Credentials (VCs)]]:
 ~ A digital credential that can be verified by a third party.

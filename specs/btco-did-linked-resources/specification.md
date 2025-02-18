@@ -112,9 +112,9 @@ The Verifiable Credential for a curated collection MUST conform to the following
     "description": "A curated collection of digital art pieces",
     "resources": [
       "did:btco:1954913028215432/0",
-      "did:btco:1923519999999999/0",
-      "did:btco:1923519999999999/0",
-      "did:btco:1923519999999999/0",
+      "did:btco:1923519999999991/0",
+      "did:btco:1923519999999992/0",
+      "did:btco:1923519999999993/0",
       "did:btco:1923519999999999/0"
     ]
   },

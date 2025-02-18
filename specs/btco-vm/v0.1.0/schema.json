@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://ordinals.plus/v1"
+  ],
+  "type": ["VerifiableCredential", "BTCOMetadata"],
+  "issuer": {
+    "id": "did:btco:<sat-number>"
+  },
+  "validFrom": "2024-03-21T12:00:00Z",
+  "credentialSubject": {
+    "id": "did:btco:<sat-number>/<index>",
+    "type": "BTCOInscription",
+    "metadata": {
+      "name": "string",
+      "description": "string",
+      "properties": {},
+      "attributes": {}
+    }
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-jcs-2022",
+    "created": "2024-03-21T12:00:00Z",
+    "verificationMethod": "did:btco:<sat-number>#key-1",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z..."
+  }
+} 
