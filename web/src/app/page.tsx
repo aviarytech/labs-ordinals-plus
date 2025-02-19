@@ -4,7 +4,7 @@ import LatestNews from '@/components/LatestNews'
 import DifLabs from '@/components/DifLabs'
 import Roadmap from '@/components/Roadmap'
 import Community from '@/components/Community'
-import Documentation from '@/components/Documentation'
+import Specifications from '@/components/Specifications'
 import Footer from '@/components/Footer'
 import { getAllBlogPosts } from '@/lib/blog'
 
@@ -19,7 +19,7 @@ export default async function Home() {
         <LatestNews posts={posts} />
         <Roadmap />
         <Community />
-        <Documentation />
+        <Specifications />
         <DifLabs />
         <Footer />
       </main>
