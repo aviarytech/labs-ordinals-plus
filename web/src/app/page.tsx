@@ -6,6 +6,7 @@ import Roadmap from '@/components/Roadmap'
 import Community from '@/components/Community'
 import Specifications from '@/components/Specifications'
 import Footer from '@/components/Footer'
+import DifLabsPresentation from '@/components/DifLabsPresentation'
 import { getAllBlogPosts } from '@/lib/blog'
 
 export default async function Home() {
@@ -16,6 +17,7 @@ export default async function Home() {
       <Header />
       <main className="min-h-screen">
         <Hero />
+        <DifLabsPresentation />
         <LatestNews posts={posts} />
         <Roadmap />
         <Community />
