@@ -45,7 +45,7 @@
     },
     {
       "title": "BTCO Verifiable Metadata",
-      "spec_directory": "./specs/btco-vm/v0.1.0",
+      "spec_directory": "./specs/btco-vm/v0.2.0",
       "markdown_paths": [
         "header.md",
         "abstract.md",

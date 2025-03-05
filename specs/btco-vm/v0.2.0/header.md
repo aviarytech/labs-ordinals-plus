@@ -1,4 +1,4 @@
-BTCO DID Method<br>
+BTCO Verifiable Metadata<br>
 ==================
 
 **Specification Status:** EDITORS DRAFT
@@ -19,4 +19,4 @@ BTCO DID Method<br>
 ~ [File a bug](https://github.com/decentralized-identity/labs-ordinals-plus/issues)
 ~ [Commit history](https://github.com/decentralized-identity/labs-ordinals-plus/commits/main)
 
------------------------------------- 
+------------------------------------
