@@ -63,7 +63,7 @@ export default function Specifications() {
                 BTCO Verifiable Metadata
               </a>
               <span className="bg-[#f8f9fa] text-[#495057] px-3 py-1 rounded-full text-sm font-medium">
-                v0.1.0
+                v0.2.0
               </span>
               <span className="bg-[#fff3cd] text-[#856404] px-3 py-1 rounded-full text-sm font-medium">
                 Draft

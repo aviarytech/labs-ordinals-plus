@@ -25,7 +25,7 @@ export default function Roadmap() {
             <div className="flex flex-col items-center flex-1 max-w-[500px] bg-white backdrop-blur-md p-8 rounded-xl shadow-md border border-[#f7931a]/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group-hover:border-[#f7931a]/20">
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] bg-clip-text text-transparent">
                 
-                Specifications 
+                Specifications ✅ 
                 <a href="https://blog.identity.foundation/dif-labs-ssi-market-gets-an-innovation-hub-2/" 
                    target="_blank" 
                    rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function Roadmap() {
                 </li>
               </ul>
               <div className="mt-4 text-[#f7931a] font-semibold text-sm opacity-90">
-                Completes Feb 18, 2025
+                Completed Feb 18, 2025
               </div>
             </div>
           </div>
@@ -73,12 +73,6 @@ export default function Roadmap() {
               <div className="mt-4 text-[#f7931a] font-semibold text-sm opacity-90">
                 Completes May 18, 2025
               </div>
-              <button 
-                onClick={() => window.location.href = '/donate'} 
-                className="mt-4 px-4 py-2 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] text-white rounded-lg font-semibold hover:shadow-lg transition-shadow"
-              >
-                Support Development ₿
-              </button>
             </div>
           </div>
 
