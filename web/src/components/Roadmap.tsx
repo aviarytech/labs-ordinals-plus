@@ -22,10 +22,12 @@ export default function Roadmap() {
         <div className="w-[60px] h-[60px] bg-gradient-to-r from-[#f7931a] to-[#d97b0d] rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-md flex-shrink-0 z-10">
               1
             </div>
-            <div className="flex flex-col items-center flex-1 max-w-[500px] bg-white backdrop-blur-md p-8 rounded-xl shadow-md border border-[#f7931a]/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group-hover:border-[#f7931a]/20">
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] bg-clip-text text-transparent">
-                
-                Specifications ✅ 
+            <div className="flex flex-col items-center flex-1 max-w-[500px] bg-white backdrop-blur-md p-8 rounded-xl shadow-md border border-[#f7931a]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group-hover:border-[#f7931a]/30 relative">
+              <div className="absolute top-0 right-0 bg-[#f7931a] text-white px-6 py-1 rounded-bl-lg rounded-tr-xl font-bold shadow-md">
+                DRAFT READY ✓
+              </div>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] bg-clip-text text-transparent flex items-center">
+                <span>Specifications</span>
                 <a href="https://blog.identity.foundation/dif-labs-ssi-market-gets-an-innovation-hub-2/" 
                    target="_blank" 
                    rel="noopener noreferrer"
@@ -46,7 +48,7 @@ export default function Roadmap() {
                 </li>
               </ul>
               <div className="mt-4 text-[#f7931a] font-semibold text-sm opacity-90">
-                Completed Feb 18, 2025
+                Initial drafts published Feb 18, 2025
               </div>
             </div>
           </div>
