@@ -19,14 +19,20 @@ export default function Roadmap() {
 
         <div className="flex flex-col gap-12 items-center">
           <div className="flex justify-center items-center gap-8 animate-fade-in [animation-delay:200ms] w-full max-w-[800px] group">
-        <div className="w-[60px] h-[60px] bg-gradient-to-r from-[#f7931a] to-[#d97b0d] rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-md flex-shrink-0 z-10">
-              1
+            <div className="w-[60px] h-[60px] bg-gradient-to-r from-[#f7931a] to-[#d97b0d] rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-md flex-shrink-0 z-10 relative">
+              <span className="absolute inset-0 flex items-center justify-center">1</span>
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                  <span className="text-[#f7931a] text-sm">✓</span>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col items-center flex-1 max-w-[500px] bg-white backdrop-blur-md p-8 rounded-xl shadow-md border border-[#f7931a]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group-hover:border-[#f7931a]/30 relative">
-              <div className="absolute top-0 right-0 bg-[#f7931a] text-white px-6 py-1 rounded-bl-lg rounded-tr-xl font-bold shadow-md">
+            <div className="flex flex-col items-center flex-1 max-w-[500px] bg-white backdrop-blur-md p-8 rounded-xl shadow-md border border-[#00aa00]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group-hover:border-[#00aa00]/30 relative">
+              <div className="absolute top-0 right-0 bg-[#00aa00] text-white px-6 py-1 rounded-bl-lg rounded-tr-xl font-bold shadow-md">
                 DRAFT READY ✓
               </div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] bg-clip-text text-transparent flex items-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00aa00]/10 to-[#00cc00]/5 rounded-xl pointer-events-none"></div>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#f7931a] to-[#d97b0d] bg-clip-text text-transparent flex items-center relative z-10">
                 <span>Specifications</span>
                 <a href="https://blog.identity.foundation/dif-labs-ssi-market-gets-an-innovation-hub-2/" 
                    target="_blank" 
@@ -36,18 +42,18 @@ export default function Roadmap() {
                   <span className="text-[#00ff00]">LABS</span>
                 </a>
               </h3>
-              <ul className="list-none p-0 m-0">
-                <li className="py-2 pl-6 relative text-[#495057] before:content-['→'] before:absolute before:left-0 before:text-[#f7931a] before:font-bold">
+              <ul className="list-none p-0 m-0 relative z-10">
+                <li className="py-2 pl-6 relative text-[#495057] before:content-['✓'] before:absolute before:left-0 before:text-[#00aa00] before:font-bold">
                   Technical specifications development
                 </li>
-                <li className="py-2 pl-6 relative text-[#495057] before:content-['→'] before:absolute before:left-0 before:text-[#f7931a] before:font-bold">
+                <li className="py-2 pl-6 relative text-[#495057] before:content-['✓'] before:absolute before:left-0 before:text-[#00aa00] before:font-bold">
                   DID method specification updates
                 </li>
-                <li className="py-2 pl-6 relative text-[#495057] before:content-['→'] before:absolute before:left-0 before:text-[#f7931a] before:font-bold">
+                <li className="py-2 pl-6 relative text-[#495057] before:content-['✓'] before:absolute before:left-0 before:text-[#00aa00] before:font-bold">
                   Standards documentation
                 </li>
               </ul>
-              <div className="mt-4 text-[#f7931a] font-semibold text-sm opacity-90">
+              <div className="mt-4 text-[#00aa00] font-semibold text-sm opacity-90 relative z-10">
                 Initial drafts published Feb 18, 2025
               </div>
             </div>
