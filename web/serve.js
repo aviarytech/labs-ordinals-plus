@@ -4,6 +4,36 @@ const server = Bun.serve({
     const url = new URL(req.url);
     let filePath = url.pathname;
     
+    // Handle CORS preflight requests
+    if (req.method === 'OPTIONS') {
+      return new Response(null, {
+        status: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+          'Access-Control-Max-Age': '86400',
+        },
+      });
+    }
+
+    // Handle vocabulary context endpoint
+    if (filePath === '/vocab/v1' || filePath === '/vocab/v1/') {
+      const vocabFile = Bun.file('./out/vocab/v1/index.json');
+      if (await vocabFile.exists()) {
+        return new Response(vocabFile, {
+          headers: {
+            'Content-Type': 'application/ld+json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+            'Access-Control-Max-Age': '86400',
+            'Cache-Control': 'public, max-age=86400',
+          },
+        });
+      }
+    }
+    
     // Handle root path
     if (filePath === '/') {
       filePath = '/index.html';
