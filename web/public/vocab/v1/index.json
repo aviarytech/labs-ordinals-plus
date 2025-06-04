@@ -1,9 +1,4 @@
-import { NextResponse } from 'next/server';
-
-// Configure route for static export
-export const dynamic = 'force-static';
-
-const vocabularyContext = {
+{
   "@context": {
     "@version": 1.1,
     "AtomicResourceCredential": "https://ordinals.plus/vocab/v1#AtomicResourceCredential",
@@ -17,13 +12,4 @@ const vocabularyContext = {
       "value": "https://ordinals.plus/vocab/v1#traitValue"
     }
   }
-};
-
-export async function GET() {
-  return NextResponse.json(vocabularyContext, {
-    headers: {
-      'Content-Type': 'application/ld+json',
-      'Cache-Control': 'public, max-age=86400', // Cache for 24 hours
-    },
-  });
 } 
